@@ -1,0 +1,23 @@
+.global{
+
+}
+
+.option_btn{
+  
+    &.option_not_available{
+        background-color: brown;
+    }
+
+    &.selected{
+        background-color: blue !important;
+    }
+
+    &.with_thumnail{
+        background-color: green;
+    }
+}
+
+.global_container_selector{
+    background-color: gray;
+    width: 300px;
+}

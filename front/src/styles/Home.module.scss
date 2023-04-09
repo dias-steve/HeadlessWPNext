@@ -1,0 +1,15 @@
+.container {
+  padding: 0 2rem;
+}
+.globalContainer{
+
+}
+
+.snap_container{
+	scroll-snap-type: y mandatory;
+  
+  overflow-y: auto;	
+  -webkit-overflow-scrolling: touch;
+  height: 100vh;
+
+}

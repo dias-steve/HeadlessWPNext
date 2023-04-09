@@ -1,0 +1,130 @@
+@import '@/styles/theme/variables';
+.global{
+
+}
+
+/*==========================================================================
+=             VariationRowStyle    =
+============================================================================*/
+.single_variation_row_global_container{
+    margin-top: 10px;
+    .btn_option_wrapper{
+        background-color: #3333331c;;
+       
+        border-radius: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5px;
+   
+    }
+    .title{
+        color: $dark-light-tranparent;
+        font-size: 0.7rem;
+        font-weight: 100;
+        margin-left: 2px;
+   
+
+    }
+
+}
+
+
+/*=====  VariationRowStyle ======*/
+
+
+
+/*=============================================
+=            OPTION BTN            =
+=============================================*/
+
+.option_btn{
+  
+    @media (pointer:fine){
+        &:hover{
+            background-color:#33333310;
+        }
+    }
+
+    &:active{
+
+    }
+
+    background-color: transparent;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+   flex: 1;
+    cursor: pointer;
+    transition: 300ms;
+
+    .label{
+        font-size: 0.9;
+        color: $dark;
+        font-weight: 300;
+        text-align: center;
+    }
+    &.option_not_available{
+   
+      
+        .label{
+          
+            position: relative;
+            color: $dark-light-tranparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .dash{
+                position: absolute;
+                background-color: $dark-light-tranparent;
+                height: 1px;
+                width: 200%;
+            }
+        }
+    }
+
+    &.selected{
+      background-color:#3333335a;
+      .label{
+        color: $dark !important;
+        .dash{
+            background-color: $dark !important;
+        }
+      }
+
+
+
+    }
+
+
+    &.with_thumnail{
+        border-radius: 16px !important;
+        .thumnail_wrapper{
+            padding: 3px;
+            $img-size: 25px;
+            height:  $img-size * 3;
+            width:  $img-size * 2;
+        }
+        &.option_not_available{
+   
+            .thumnail_wrapper{
+                opacity: 0.3;
+            }
+        }
+        
+    }
+
+    
+}
+
+/*=====  End of OPTION BTN  ======*/
+
+
+
+
+.global_container_selector{
+    min-width: 170px;
+    width: 100%;
+}

@@ -1,0 +1,114 @@
+@import '@/styles/theme/variables';
+.modal_global_container{
+    position: fixed;
+    z-index: 10;
+    background-color:  #ddddddbc; 
+    transition: 300ms;
+    padding: 8px 30px 30px 30px;
+    filter: drop-shadow(5px 5px 15px #11111132);
+    backdrop-filter: blur(10px);
+    --tw-backdrop-blur: blur(10px);
+    bottom: 2%;
+    left: 50%;
+    border-radius: 30px;
+    width: clamp(200px, 80vw,300px);
+    transform: translateX(-50%);    
+    &.hide{
+        opacity: 0;
+
+        transform: translate(-50%, 100%);
+    
+    }
+    &.show{
+        opacity: 1;
+        transform: translate(-50%, 0%);
+  
+    }
+
+    .btn_add_to_cart_wrapper{
+        margin-top: 20px;
+        &.show_added{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $dark;
+        }
+       
+        .added_to_the_cart_message{
+            color: $orange;
+        }
+        .already_in_cart_text{
+            text-align: center;
+            font-size: 0.7rem;
+            color: $dark-lighter;
+            white-space: pre-wrap;
+        }
+   
+    }
+
+
+
+}
+
+.btn_close_global_container{
+    padding: 3px 4px;
+    width: 25px;
+    height: 28px;
+    background-color: transparent;
+    transition:  background-color 300ms;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    @media(pointer:fine) {
+        &:hover{
+            background-color: #33333313;
+        }
+    }
+    border-radius: 100%;
+    .arrow_icon{
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.btn_open_global_container{
+    position: fixed;
+    z-index: 10;
+  
+    bottom: 4%;
+    left: 50%;
+
+    width: clamp(200px, 80vw,300px);
+    padding: 0 40px;
+    transform: translateX(-50%);
+
+    &.hide{
+        opacity: 0;
+
+        transform: translate(-50%, 100%);
+    
+    }
+    &.show{
+        opacity: 1;
+        transform: translate(-50%, 0%);
+  
+    }
+    .already_in_cart_text{
+        text-align: center;
+        font-size: 0.7rem;
+        color: $dark-lighter;
+        white-space: pre-wrap;
+    }
+    &.show_added{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $dark;
+        color: $orange;
+        width: 200px;
+        padding: 0 40px;
+    }
+
+}

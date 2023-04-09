@@ -1,0 +1,61 @@
+.global_container{
+    position: fixed;
+    z-index: 200;
+
+    width: 80vw;
+    max-width: 500px;
+    background-color: rgb(31, 31, 31) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    transition: 300ms;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 20px #3434347f;
+    padding: 50px 10px;
+    
+    .title, .message{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 200;
+        line-height: 1.8rem;
+    }
+    .title{
+        font-size: 0.8rem;
+    }
+    &.hide{
+        opacity: 0;
+        transform: translate(-50%, -100%);
+
+    }
+    &.show{
+        opacity: 1;
+        transform: translate(-50%, 10%);
+    }
+    .icon{
+        height: 50px;
+        width: 50px;
+        margin-bottom: 30px;
+
+    }
+
+.btn{
+    background-color: white;
+    color: black;
+    transform: 300ms;
+    cursor: pointer;
+
+    @media (pointer:fine) {
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.564);
+        }
+    }
+    
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+}

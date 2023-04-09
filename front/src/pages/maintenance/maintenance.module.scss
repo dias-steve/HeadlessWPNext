@@ -1,0 +1,53 @@
+@import '@/styles/theme/variables';
+
+@media screen and (min-width: map-get($breakpoints, lg)){
+.global_container_header{
+    display : flex;
+    width: 100vw;
+    color:  $dark-light-tranparent;
+    padding-top: 20px;
+    position: fixed;
+    top:0;
+
+    .col1, .col2{
+       width: map-get($with-col, main); 
+       max-width: map-get($max-with-col, main );
+       padding: 0px map-get($padding-side-container , content )
+    }
+    .col0, .col4{
+        flex: 1;
+        padding: 0px map-get($padding-side-container , content )
+    }
+
+    .col4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo_container{
+            width: clamp(70px,70%, 200px);
+        }
+    }
+
+    .wrapper_btn_lang{
+        margin-top: 10px;
+        margin-left: 1px;
+        
+    }
+
+}
+}
+@media screen and (max-width: map-get($breakpoints, lg)){
+.global_container_header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    margin-right: 20%;
+    padding-top: 20px;
+    .logo_container{
+        width: clamp(100px,70%, 200px);
+    }
+    
+}
+}

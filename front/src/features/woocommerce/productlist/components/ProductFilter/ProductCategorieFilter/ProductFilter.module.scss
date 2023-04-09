@@ -1,0 +1,19 @@
+.container_btn{
+    background-color: gray ;
+    margin: 20px;
+    padding: 2px;
+    width: 300px;
+    @media (pointer:fine){
+    &:hover{
+        background-color: red;
+    }
+    }
+
+    &:active{
+        background-color: red;
+    }
+
+    &.isActive{
+        background-color: blue;
+    }
+}

@@ -1,0 +1,40 @@
+@import '@/styles/theme/variables';
+.global_container{
+
+
+  
+    transition: 300ms;
+ 
+
+
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn_add_to_cart_wrapper{
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+        &.show_added{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $dark;
+        }
+   
+       
+        .added_to_the_cart_message{
+            color: $orange;
+        }
+   
+    }
+    .already_in_cart_text{
+        text-align: center;
+        font-size: 0.7rem;
+        color: $dark-lighter;
+        white-space: pre-wrap;
+    }
+}

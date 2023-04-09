@@ -1,0 +1,59 @@
+@import '@/styles/theme/variables';
+.global_container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    .quantity{
+        padding-top: 5px;
+        padding-left: 5px;
+        color: $dark-light-tranparent;
+    }
+    .icon_container, .icon{
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+    }
+    .icon_container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 300ms;
+        .icon{
+            position: absolute;
+        }
+    }
+
+    .icon_orange{
+        opacity: 0;
+    }
+    .icon_black{
+        opacity: 1;
+    }
+    @media (pointer:fine){
+    &:hover{
+        .icon_orange{
+            opacity: 1;
+        }
+        .icon_black{
+            opacity: 0;
+        }
+        .quantity{
+            color: $orange;
+        }
+    }
+    }
+    &:active{
+        .icon_orange{
+            opacity: 1;
+        }
+        .icon_black{
+            opacity: 0;
+        }
+        .quantity{
+            color: $orange;
+        }
+    }
+
+}

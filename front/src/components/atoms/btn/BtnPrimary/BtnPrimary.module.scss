@@ -1,0 +1,106 @@
+@import './../../../../styles/theme/variables';
+
+.global_container_btn_withClose{
+    min-height: 30px;
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-end;
+
+    
+
+    .global_close_btn{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+        background-color: $gray-light-transparent;
+        width: 40px;
+        border-radius: 0  map-get($radius , s ) map-get($radius , s ) 0;
+        @media (pointer:fine) {
+            &:hover{
+                background-color: #c2c2c2;
+                
+            }
+            
+        }
+        .close_icon{
+            height: 20px;
+            width: 13px;
+            margin-right: 9px;
+            
+        }
+    }
+    .global_container{
+        position: absolute ;
+        height: 100%;
+        margin-right: 30px;
+    }
+
+}
+.global_container{
+ 
+    border: none;
+
+
+
+    border: none;
+    outline: none;
+
+    background-color: $orange;
+    color: $orange-light;
+
+    cursor: pointer;
+    border-radius: map-get($radius , s );
+
+    width: fit-content;
+    min-height: 30px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+    font-size: 1rem;
+    padding: 2px 20px;
+   
+
+    &.grayColor{
+        background-color: $gray-light-transparent !important;
+        color: $gray;
+        @media (pointer:fine){
+        &:hover{
+            background-color: $orange !important;
+            color: $orange-light !important;
+        }
+        }
+        &:active{
+            background-color:$dark !important;
+        }
+    }
+    .label{
+        font-family: $secondary-font;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+    &.not_available{
+ 
+        background-color: #757575c3;
+        color: $dark-light-tranparent;
+        opacity: 0.6;
+        cursor: no-drop;
+    }
+
+    &.available{
+        &:active{
+            background-color:$dark !important;
+        }
+        @media (pointer:fine){
+        &:hover{
+            background-color: $dark;
+            color: $orange;
+        }
+        }
+    }
+
+
+}

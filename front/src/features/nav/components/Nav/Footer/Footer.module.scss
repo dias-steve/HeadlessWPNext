@@ -1,0 +1,98 @@
+@import '@/styles/theme/variables';
+.global_container{
+    display : flex;
+    justify-content: center;
+    width: 100vw;
+  
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    
+
+    
+
+
+    .global_content{
+  
+        width: 90vw;
+
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: clamp(100px,20lvh, 300px);
+        padding-bottom: clamp(60px,10lvh, 200px);
+
+
+  
+        .col1, .col2, .col0, .col4{
+            z-index: inherit;
+            width: 45vw;
+            padding: 0px 5px
+         }
+
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        width: 100vw;
+        display : flex;
+
+        .col1, .col2{
+            width: map-get($with-col, main); 
+            max-width: map-get($max-with-col, main );
+            padding: 0px map-get($padding-side-container , content )
+         }
+         .col0, .col4{
+             flex: 1;
+             padding: 0px map-get($padding-side-container , content )
+         }
+     
+         .col4{
+       
+         }
+
+    }
+}
+
+
+
+}
+
+.global_content_naked{
+  
+    width: 90vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: clamp(100px,20lvh, 300px);
+    padding-bottom: clamp(60px,10lvh, 200px);
+
+  
+
+
+
+    .col1, .col2, .col0, .col4{
+      
+        width: 45vw;
+        padding: 0px 5px
+     }
+
+@media screen and (min-width: map-get($breakpoints, lg)) {
+
+    width: 100vw;
+    display : flex;
+
+
+
+    .col1, .col2{
+        width: map-get($with-col, main); 
+        max-width: map-get($max-with-col, main );
+        padding: 0px map-get($padding-side-container , content )
+     }
+     .col0, .col4{
+         flex: 1;
+         padding: 0px map-get($padding-side-container , content )
+     }
+ 
+     .col4{
+   
+     }
+
+}
+}

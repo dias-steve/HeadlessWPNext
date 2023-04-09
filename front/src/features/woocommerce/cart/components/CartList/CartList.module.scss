@@ -1,0 +1,135 @@
+@import '@/styles/theme/variables';
+.global_container_wrapper{
+
+}
+
+.attribut_wrapper{
+    display: flex;
+    margin:  2px 0px;
+  
+    .attribut_item{
+        &.first{
+            margin: 0;
+        }
+         
+        .label{
+            margin: 2px 0;
+            padding: 0;
+            font-size: 0.7rem;
+            color: $gray;
+            font-weight: 100;
+            line-height: 0.9rem;
+            span{
+                font-size: 0.9rem;
+                color: $dark;
+
+
+            }
+        }
+      
+    }
+}
+.error_message{
+    font-size: 0.8rem;
+    color: red;
+}
+.btn{
+
+    color: $dark;
+    margin-right: 10px;
+    padding: 1px 10px 2px 10px;
+    border-radius: 10px;
+    background-color: #8f8f8f45;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+    &:focus { outline: none; } 
+    @media (pointer:fine){
+    &:hover{
+        background-color: #73737345;
+        color: black;
+    }
+    }
+
+
+
+}
+
+.delete_btn{
+    position: absolute;
+    top:10px;
+    right: 0px;
+  
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height: 10px;
+        width: 10px;
+    }
+    color: rgba(188, 76, 76, 0.992);
+    @media (pointer:fine){
+    &:hover{
+        background-color: #73737345;
+    
+    }
+    }
+}
+
+.global_container_product_card_cart{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 10px;
+    background-color: #0000000f;
+    border-radius: 10px;
+    position: relative;
+    .image_product_wrapper{
+        
+        position: relative;
+        .error_icon{
+            position: absolute;
+            width: 19px;
+            z-index: 2;
+        }
+        height: 90px;
+        width: 60px;
+        margin-right: 20px;
+    }
+    .info_product_wrapper{
+        flex: 1;
+        .title_card{
+            margin: 4px 0;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 100;
+            color: $dark;
+            cursor: pointer;
+
+        }
+        .price{
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 100;
+
+        }
+        .quantity{
+            margin: 2px 0;
+            padding: 0;
+            font-size: 0.8rem;
+            color: $dark-lighter;
+            font-weight: 100;
+            line-height: 0.9rem;
+            
+        }
+    }
+}
+
+.no_item_in_cart_message{
+    font-size: 0.8rem;
+    color: $dark;
+}

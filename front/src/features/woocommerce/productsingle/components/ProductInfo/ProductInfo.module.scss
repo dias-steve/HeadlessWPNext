@@ -1,0 +1,60 @@
+@import '@/styles/theme/variables';
+
+.global_container_info{
+    position: relative;
+    margin-top: 20px;
+    .size_guide_wrapper{
+        margin-top: 10px;
+    }
+    .title_price_wrapper{
+        .title{
+            font-size: clamp(1.5rem, 2vw, 2rem);
+            font-weight: 300;
+            color: $gray-darker;
+            margin: 0;
+            margin-bottom: 8px;
+        }
+
+        .price{
+            font-size: 1.2rem;
+            font-weight: 100;
+            color: $gray-darker;
+           
+        }
+
+        .regular_price{
+            padding: 0 10px;
+            font-size: 1rem;
+            font-weight: 100;
+            color: $gray;
+            text-decoration-line: line-through;
+        }
+
+        .not_avalaible{
+       
+            font-size: 0.8rem;
+            font-weight: 100;
+            color: $red;
+            color: #ae0606;
+            background-color: #be0d0d22;
+            padding: 3px 0; 
+         
+        }
+
+        .sold_individualy{
+            font-size: 0.8rem;
+            font-weight: 100;
+            color: #d16507;
+            background-color: #d165072c;
+            padding: 3px 0; 
+           
+        }
+    }
+
+    .price_from{
+        font-size: 0.8rem;
+        color: $dark-light-tranparent;
+        margin: 0;
+      
+    }
+}

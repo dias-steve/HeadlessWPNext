@@ -1,0 +1,46 @@
+@import '@/styles/theme/variables';
+.global_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: clamp(100px, 40%,200px);
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        scroll-snap-align: center;
+        margin-top: 0;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+
+    .list_product_wrapper{
+        display: flex;
+
+
+        padding: 0 10vw;
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            padding: 0;
+            align-items: center;
+            justify-content: space-around;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            width: 100%;
+        }
+        width: 100vw;
+        overflow-y: scroll;
+    }
+    .title{
+        padding: 0 map-get($padding-side-container, content-mobile );
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            padding: 0
+
+        }
+        font-size: 1rem;
+        color: $dark-light-tranparent;
+        font-weight: 100;
+    }
+}

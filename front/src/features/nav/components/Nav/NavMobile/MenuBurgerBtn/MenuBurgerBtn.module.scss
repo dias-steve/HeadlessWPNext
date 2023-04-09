@@ -1,0 +1,49 @@
+.global_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global_container_btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+    cursor: pointer;
+    .icon{
+        position: absolute;
+        
+    }
+    .icon_hover{
+        opacity: 0;
+    }
+    .icon_not_hover{
+        opacity: 1;
+    }
+
+    @media (pointer:fine){
+    &:hover{
+        .icon_hover{
+            opacity: 1;
+        }
+        .icon_not_hover{
+            opacity: 0;
+        }
+    }
+    }
+
+    &:active{
+        .icon_hover{
+            opacity: 1;
+        }
+        .icon_not_hover{
+            opacity: 0;
+        }
+    }
+}
+
+.global_container, .icon{
+    width: 27px;
+    height: 28px;
+}

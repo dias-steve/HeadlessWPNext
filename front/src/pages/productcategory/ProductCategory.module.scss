@@ -1,0 +1,36 @@
+
+.product_list_wrapper{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    transition: 300ms;
+    opacity: 1;
+
+}
+
+.paginations_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.landmark{
+    width: 100px;
+    height: 100px;
+   
+  }
+
+  .filter_wrapper {
+    &.show{
+      opacity: 1;
+      transition: 500ms;
+    }
+    &.hide{
+      opacity: 0;
+      transition: 300ms;
+    }
+  }
+  

@@ -1,0 +1,201 @@
+@import '@/styles/theme/variables';
+//variabkle
+$primary-color: $dark;
+$primary-color-darker-focus:$orange-dark;
+$secondary-color-gray: #4c4c4c7b;
+
+$prymary-dark-mode: $white;
+$prymary-focus-dark-mode: $orange;
+
+$font-label: $primary-font;
+$font-text: $primary-font;
+
+$font-weight-label-input: 200;
+$font-weight-text-input: 200;
+
+$color-label-error: rgb(189, 18, 18);
+$color-border-error: rgba(189, 18, 18, 0.593);
+
+$border-width-input: 1px;
+$border-radius-input: 10px;
+$margin-left: 11px;
+
+
+.globalContainer{
+    margin: 5px;
+    padding: 0;
+    height: fit-content;
+
+    .messageErrorWrapper{
+        margin-left: $margin-left;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        .messageError{
+            margin: 0 0 0 0px;
+            padding: 0;
+            color: $color-label-error;
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+
+            height: fit-content;
+        }
+        .icon{
+            width: 15px;
+
+        }
+
+    }
+}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 60px;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    color: $secondary-color-gray;
+    input, textarea{
+    background-color: rgba(255, 255, 255, 0.249) !important;
+    color: $primary-color !important;
+
+    }
+    
+    &.blackStyle{
+        input, textarea{
+            color: $prymary-dark-mode !important;
+            border-color:transparent;
+            background-color: rgba(0, 0, 0, 0.225) !important;
+            caret-color: $primary-color;
+            font-family: $secondary-font;
+            font-weight: 100;
+            &:focus{
+                border-color:$prymary-focus-dark-mode;
+                outline: none;
+                color: $prymary-focus-dark-mode !important;
+            }
+        }
+        .label{
+            color:$prymary-dark-mode!important;
+            &.onFocus{
+                color: $prymary-focus-dark-mode !important;
+            }
+            
+        }
+
+
+
+        
+    }
+
+    &.whiteStyle{
+        input, textarea{
+            color: $primary-color !important;
+            border-color:transparent;
+            background-color: rgba(255, 255, 255, 0.361) !important;
+            caret-color: $primary-color;
+        }
+        .label{
+            color: $primary-color-darker-focus !important;
+            &.upLabel{
+
+            }
+            
+        }
+        
+    }
+
+    &.errorStyle{
+        .label{
+            color: $color-label-error !important;
+        }
+
+        input, textarea{
+      
+            border-color:$color-border-error !important;
+   
+        }
+    }
+    textarea{
+        resize: none;
+    }
+
+    &.textarea{
+        height: 100%;
+     
+    }
+
+    &.notTextarea{
+        height: 60px;
+    }
+    .label{
+        font-size: 1rem;
+        font-weight: $font-weight-label-input;
+        position: absolute;
+        z-index: 1;
+        transition: 300ms;
+        left: $margin-left;
+        margin-top: 2px;
+        font-family: $font-label;
+
+       &.upLabel{
+      top: 0px;
+        font-size: 0.7rem;
+      
+       }
+
+       &.notUpLabel{
+     
+       top: 30px;
+        font-size: 0.9rem;
+        color: $secondary-color-gray;
+      
+       }
+       &.onFocus{
+        color: $primary-color-darker-focus ;
+       }
+       &.notOnFocus{
+        color: black;
+       }
+
+ 
+        
+    }
+
+
+    .input {
+        margin-top: 20px;
+        border: $border-width-input solid $secondary-color-gray;
+        padding: 10px 15px;
+        border-radius:$border-radius-input;
+        z-index: 2;
+        background-color: transparent;
+      
+        border-style: solid ;
+        height: 100%;
+        transition: 300ms;
+        font-size: 1rem;
+        font-weight: $font-weight-text-input;
+        &::placeholder {
+
+            opacity: 0;
+           
+            
+        }
+
+        &:focus{
+            border-color:$primary-color-darker-focus;
+            outline: none;
+            color: $primary-color-darker-focus !important;
+
+       
+        }
+
+        
+
+
+    }
+
+ 
+}

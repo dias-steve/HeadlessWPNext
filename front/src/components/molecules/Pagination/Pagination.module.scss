@@ -1,0 +1,68 @@
+@import '@/styles/theme/variables';
+.btn_number_container{
+    background-color: $gray-light;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px 5px 12px;
+    border-radius: 10px;
+    margin: 5px;
+
+    cursor: pointer;
+    .label{
+        color: $dark-lighter;
+        text-align: center;
+        font-size: 0.9rem;
+     
+    }
+    transition: 300ms;
+    @media (pointer:fine){
+    &:hover{
+        background-color: $dark-light-tranparent;
+    }
+    }
+    &:active{
+        background-color: $dark-light-tranparent;
+    }
+    &.checked{
+        background-color: $dark;
+        .label{
+            color: $orange !important;
+        }
+
+    }
+}
+
+.btn_next_prev{
+    background-color: $gray-light;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px 5px 12px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+    .label{
+        color: $dark-lighter;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    transition: 300ms;
+    @media (pointer:fine){
+    &:hover{
+        background-color: $dark-light-tranparent;
+    }
+    }
+    &:active{
+        background-color: $dark-light-tranparent;
+    }
+    &.checked{
+        background-color: $dark;
+        .label{
+            color: $orange !important;
+        }
+
+    }
+}

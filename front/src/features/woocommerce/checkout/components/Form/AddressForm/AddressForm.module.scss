@@ -1,0 +1,13 @@
+@import '@/styles/theme/variables';
+.global_container{
+
+    .title{
+
+        font-size: 1.2rem;
+        font-weight: 100;
+        padding-left: 10px;
+        color: $dark;
+        margin: 0;
+        font-family: $primary-font;
+    }
+}

@@ -1,0 +1,17 @@
+@import '@/styles/theme/variables';
+.global_container{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    &.hide_nav{
+        transition: 300ms;
+        transform: translateY(-120%);
+    }
+
+    &.show_nav{
+        transition: 300ms;
+        transform: translateY(0%);
+    }
+
+}

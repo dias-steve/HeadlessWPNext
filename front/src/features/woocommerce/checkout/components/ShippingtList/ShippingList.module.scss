@@ -1,0 +1,70 @@
+@import '@/styles/theme/variables';
+.global_container{
+    margin-top: 50px;
+    color: $dark;
+    background-color: #ecebeb;
+    border-radius: 10px;
+    padding: 10px 15px;
+    .title{
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 100;
+        margin-bottom: 15px;
+        font-family: $primary-font;
+    }
+}
+
+.item_method_shipping_wrapper{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 15px 15px;
+    border: 1px solid #83838300
+    ;
+    border-radius: 10px;
+    cursor: pointer;
+    .title, .price{
+        font-size: 1rem;
+        font-weight: 100;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    @media(pointer: fine){
+        &:hover{
+            background-color: #44444418 ;
+            transition: 300ms;
+        }
+    }
+    &.checked{
+        background-color: rgba(0, 0, 0, 0.785);
+        color: $orange;
+
+        ;
+        transition: 300ms;
+    }
+
+
+    
+}
+
+.no_found{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: dark;
+   
+}
+
+.loading_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+    .spinner_wrapper{
+        height: 60px;
+        width: 60px;
+    }
+}

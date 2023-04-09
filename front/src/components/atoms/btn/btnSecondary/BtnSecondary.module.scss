@@ -1,0 +1,19 @@
+@import './../../../../styles/theme/variables';
+.global_container{
+    cursor: pointer;
+    transition: 300ms;
+
+    width: fit-content;
+    @media (pointer:fine){
+    &:hover{
+        color: $orange!important;
+    }
+    }
+    &:active{
+        color: $orange!important;
+    }
+}
+.link{
+    width: fit-content !important;
+
+}

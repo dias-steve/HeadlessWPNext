@@ -1,0 +1,122 @@
+@import '@/styles/theme/variables';
+.ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(31, 30, 30, 0.808);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+
+
+   
+
+    z-index: 999;
+    pointer-events: none;
+
+  }
+  
+  .dot {
+
+
+
+    position: fixed;
+  
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    height: 40px;
+
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+    transition: 200ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .round{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: $orange;
+        border-radius: 18px;
+        padding: 5px 15px;
+           // transition: opacity scale 0ms;
+      
+        animation: eyesClining 5s infinite ease-in-out;
+        transform: translateY(-20%);
+    &.isMoving {
+        background-color: rgb(111, 111, 111) !important;
+        opacity: 0.3 !important;
+        scale: 0.2!important;
+        transition: 100ms;
+        .label{
+            opacity: 0;
+        }
+    }
+    &.notMoving{
+        background-color: $orange;
+        opacity: 0.9 !important;
+        scale: 1!important;
+        transition: 500ms ease-in-out;
+        .label{
+            opacity: 1;
+        }
+    }
+    .label{
+
+
+        text-align: center;
+        color: $orange-light;
+      
+      
+    }
+
+    }
+
+
+
+    &:active{
+        opacity: 1 !important;
+    }
+
+  }
+  @keyframes rotationFlower {
+    0% { 
+        rotate:0deg;
+    }
+    100%{
+        rotate:180deg;
+    }
+
+  
+  
+  }
+
+  @keyframes eyesClining {
+    0% { 
+      background-color: $orange;
+      color: $orange-light;
+    }
+    17%{
+        background-color: $dark;
+        color: $orange;
+    }
+    19%{
+       background-color: $dark;
+       color: $orange;
+    }
+
+    55% { 
+       background-color: $orange;
+       color: $orange-light;
+    }
+
+  
+  
+  }

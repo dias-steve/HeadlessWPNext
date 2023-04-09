@@ -1,0 +1,15 @@
+.text{
+    text-align: center;
+    padding: 10px;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    .link{
+        text-decoration: underline;
+        @media(pointer: fine){
+            &:hover{
+                font-weight: 800;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import '@/styles/theme/variables';
+
+
+
+$img-size: 35vh;
+
+$max-size: 200px;
+
+$width-img:   $img-size * 2;
+$height-img:  $img-size * 3 ;
+
+
+
+
+$max-width-img:     $max-size * 2 ;
+$max-height-img:    $max-size * 3 ;
+.global_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    cursor: url('/zoom-icon.svg') !important;
+}
+.dimention{
+    height: $height-img;
+    width: $width-img ;
+    min-height: 500px;
+
+}
+.global_container_Image{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    &.visible {
+        opacity: 1;
+
+        transition: opacity 300ms;
+    }
+    &.notVisible {
+        opacity: 0;
+        transition: opacity 300ms;
+    }
+
+.landmark{
+    position: absolute;
+
+    height: 100%;
+
+
+    background-color: red;
+    z-index: 10;
+    display: flex;
+}
+
+}
+
+
+

@@ -1,0 +1,17 @@
+@import '@/styles/theme/variables';
+.image_wrapper{
+    margin-top: clamp(20px, 8%, 50px);
+    height: 30vw;
+    width: 90vw;
+   
+
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        margin-top: 0px;
+        width: 80vw;
+        height: 20vw;
+        max-width: 1300px;
+        max-height:300px ;
+        
+    }
+
+}

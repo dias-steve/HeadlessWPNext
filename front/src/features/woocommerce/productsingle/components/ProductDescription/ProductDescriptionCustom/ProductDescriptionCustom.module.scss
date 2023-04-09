@@ -1,0 +1,75 @@
+@import '@/styles/theme/variables';
+.wrapper_text{
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        margin-top: 10px;
+    }
+
+    &.showMore{
+        max-height: 80vh;
+        color: $gray-darker;
+        transition: 1000ms;
+        overflow-y: scroll;
+    }
+    &.showLess{
+
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            max-height: 4.5rem;
+        }
+        max-height: 3rem;
+        transition: 300ms;
+        overflow-y: hidden;
+    }
+
+
+    color: $dark-light-tranparent;
+    line-height: 1.5rem;
+    p{
+
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            font-size: 0.9rem;
+        }
+        font-size: 1rem;
+        font-weight: 300;
+        margin:0;
+      
+        
+    }
+    ul{
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            font-size: 0.9rem;
+        }
+        margin: 0;
+       
+        @media screen and (min-width: map-get($breakpoints, lg)){
+            margin: -10px;
+     
+        }
+        li{
+            padding: 0;
+            margin: 0.5rem 0;
+            
+        }
+    }
+
+    
+}
+.show_more_btn{
+    color: $gray-darker;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        margin: 0;
+        
+    }
+    @media(pointer:fine){
+        &:hover{
+           text-decoration: underline;
+        }
+    }
+}

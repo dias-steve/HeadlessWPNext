@@ -1,0 +1,65 @@
+
+@import '@/styles/theme/variables';
+
+$primary-color: $orange;
+$border-color: rgba(0, 0, 0, 0.175);
+.wrapper_spinner{
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0;
+padding: 0;
+position: relative;
+
+}
+.spin_black::before {
+  animation: 800ms  ease-in-out infinite spinner;
+  animation-play-state: inherit;
+
+  border: solid 2px #9a470ceb ;
+
+
+
+
+
+  border-bottom-color: $primary-color;
+  border-radius: 50%;
+  content: "";
+  height: 90%;
+  position: absolute;
+
+ 
+  width: 90%;
+  
+}
+.spin_white::before {
+  animation: 800ms  ease-in-out infinite spinner;
+  animation-play-state: inherit;
+
+
+
+
+    border: solid 2px $border-color;
+
+
+  border-bottom-color: $primary-color;
+  border-radius: 50%;
+  content: "";
+  height: 90%;
+  position: absolute;
+
+ 
+  width:90%;
+  
+}
+
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }

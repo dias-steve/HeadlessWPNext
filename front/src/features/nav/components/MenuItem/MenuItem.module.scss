@@ -1,0 +1,12 @@
+@import '@/styles/theme/variables';
+.menu_child_wrapper{
+    padding: 4px 0px;
+    color: $dark-light-tranparent;
+    
+    @media screen and (max-width: map-get($breakpoints, lg)) {
+ 
+        margin: 20px 0px;
+        font-size: $fs-lg;
+
+    }
+}

@@ -1,0 +1,77 @@
+@import '@/styles/theme/variables';
+
+$border-line-color: $gray-light;
+.snow_background{
+    position: fixed;
+    width: 100vw;
+    height: 100lvh;
+    z-index: -2;
+}
+.global_container{
+    display : flex;
+    width: 100vw;
+    height: 150vh;
+    z-index: -1;
+    position: fixed;
+    top: -20;
+
+
+    &.black{
+        transition: background-color 300ms;
+        background-color:  #333333fc;
+        .col1{
+            border-right:$dark-lighter 0.5px solid;
+        }
+        .col0{
+            border-right: $dark-lighter 0.5px solid;
+        }
+    
+        .col4{
+            border-left:$dark-lighter 0.5px solid;
+        }
+    }
+
+    &.white{
+  
+            transition: background-color  300ms;
+            background-color: $white;
+
+            .col1{
+                border-right: $border-line-color 0.5px solid;
+            }
+            .col0{
+                border-right: $border-line-color 0.5px solid;
+            }
+        
+            .col4{
+                border-left: $border-line-color 0.5px solid;
+            }
+
+    }
+    .col{
+     
+    }
+    .col1, .col2{
+
+        @media screen and (max-width: map-get($breakpoints, lg)) {
+            width: map-get($with-col, main-mobile); 
+        }
+       width: map-get($with-col, main); 
+       max-width: map-get($max-with-col, main );
+       padding: 0px map-get($padding-side-container , content )
+    }
+    .col1{
+        border-right: $border-line-color 0.5px solid;
+    }
+    .col0, .col4{
+        flex: 1;
+
+    }
+    .col0{
+        border-right: $border-line-color 0.5px solid;
+    }
+
+    .col4{
+        border-left: $border-line-color 0.5px solid;
+    }
+}

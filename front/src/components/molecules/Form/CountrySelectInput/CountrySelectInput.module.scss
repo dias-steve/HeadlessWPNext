@@ -1,0 +1,49 @@
+@import '@/styles/theme/variables';
+.global_container{
+    $primary-color-darker-focus:$orange-dark;
+    margin: 0px 0;
+    padding: 10px 5px;
+
+   
+    .label{
+        color: $dark-light-tranparent;
+        font-size: 0.8rem;
+        padding-left: 10px;
+        margin: 0;
+    }
+
+    select:focus{
+        .label{
+            color:$primary-color-darker-focus;
+        }
+        border-color:$primary-color-darker-focus;
+        outline: none;
+        color: $primary-color-darker-focus !important;
+    }
+    .wrapper_drop{
+        margin-top: 5px;
+        position: relative;
+        width: 100% !important;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        select{
+            padding: 5px 10px;
+            appearance: none;
+            background-color: rgba(255, 255, 255, 0.361) !important;
+            height: 40px;
+            border: 1px solid #4c4c4c7b !important;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 0.8rem;
+
+        }
+        .arrow_icon{
+            position: absolute;
+    
+            margin-right:10px ;
+        }
+    }
+
+
+}

@@ -1,0 +1,39 @@
+@import '@/styles/theme/variables';
+
+.instagramItem{
+
+  overflow: hidden;
+  width: 78vw;
+  height: 78vw;
+  margin: clamp(10px, 8vw, 50px) 0;
+  @media screen and (min-width: map-get($breakpoints, lg)){
+      width: 20vw;
+      height: 20vw;
+  }
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.instagramItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: map-get($breakpoints, lg)){
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+  width: 100%;
+}
+.instagramImg{
+  width: 100%;
+  
+  transition: 300ms;
+  &:hover{
+
+  }
+
+}

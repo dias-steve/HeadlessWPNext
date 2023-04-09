@@ -1,0 +1,32 @@
+@import '@/styles/theme/variables';
+.global_container{
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    width: 100vw;
+    min-height: 50vh;
+    padding: 100px 6%;
+    z-index: 90;
+
+}
+
+.transition_show{
+    transition: 300ms;
+    transform: translateY(0%);
+    opacity: 1;
+    .col{
+        transition: 1000ms;
+        opacity: 1;
+    }
+}
+
+.transition_hide{
+
+    transition: 600ms;
+    transform: translateY(-120%);
+    opacity: 0;
+    .col{
+        transition: 100ms;
+        opacity: 0;
+    }
+}

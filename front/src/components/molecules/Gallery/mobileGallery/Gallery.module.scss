@@ -1,0 +1,109 @@
+@import '@/styles/theme/variables';
+
+
+
+$img-size: 50vw;
+$img-size-desk: 15vw;
+$max-size: 200px;
+
+$width-img:   $img-size * 2;
+$height-img:  $img-size * 3 ;
+
+
+//desk
+$width-img-desk:   $img-size-desk * 2;
+$height-img-desk:  $img-size-desk * 3 ;
+
+$max-width-img:     $max-size * 2 ;
+$max-height-img:    $max-size * 3 ;
+
+.dimention{
+    min-height: $height-img;
+    min-width: $width-img ;
+
+}
+.global_container_Image{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+
+    &.visible {
+        opacity: 1;
+
+        transition: opacity 300ms;
+    }
+    &.notVisible {
+        opacity: 0;
+        transition: opacity 300ms;
+    }
+
+.landmark{
+    position: absolute;
+
+    height: 100%;
+
+
+    background-color: red;
+    z-index: 10;
+    display: flex;
+}
+
+}
+
+.global_container_windows{
+    max-height: $height-img;
+    max-width: $width-img ;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+
+    scroll-snap-type: x mandatory;
+
+
+
+
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none !important;
+      }
+      -ms-overflow-style: none !important; /* IE and Edge */
+      scrollbar-width: none !important; /* Firefox */
+
+}
+
+.global_container_status_viewer{
+    position: absolute;
+    z-index: 10;
+
+    .processbar{
+        height: 1px;
+        width: 100vw;
+        background-color: $dark-light-tranparent;
+        display: flex;
+        align-items: center;
+        .processbar_status{
+            height: 2px;
+
+            background-color:$dark;
+            transition: 700ms ease-in-out;
+        }
+    }
+
+}
+
+.global_image_gallery_wrapper{
+    position: relative;
+    max-height: $height-img;
+    max-width: $width-img ;
+
+
+
+}

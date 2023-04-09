@@ -1,0 +1,213 @@
+/**
+++++++++++++++++++++++++++++++++
+* Varables
+++++++++++++++++
+*/
+
+/*
+* COLORS
+* Brand colors ..... These are the main brancd colors. They will be used the most
+* Neutral colors.....White and black, gray scale, secondary colors.
+* Utility colors.....Other colors to represent states: info, warning, success, etc...
+*
+* TYPOGRAPHY
+* Font Families.....
+*
+* BREAKPOINT
+* Breakpoint.........................Global responsive breakpoints definitions
+* 
+* SPACING
+* Spacing............................Global fixed set of spacing variables
+* 
+*/
+
+/*=============================================
+=            COLORS           =
+=============================================*/
+
+/* Brand colors */
+$orange-dark: #d05310;
+$orange: #FF5C00;
+$orange-light: #FFC5A5;
+
+$red :  #ff2a00;
+
+$dark: #333333;
+$dark-lighter: #434343;
+
+
+$dark-light-tranparent: #A7A7A7;
+
+/* Neutral colors */
+$gray-darker: #555555;
+$gray: #7A7A7A;
+$gray-light: #D9D9D9;
+$gray-light-transparent: rgb(189,189,189,0.3);
+$gray-lighter-transparent: rgba(189, 189, 189, 0.317);
+$gray-light-transparent-dark:rgba(126, 126, 126, 0.3);
+
+$white: #F4F4F4;
+
+
+/* Utitity colors */
+
+
+/*=====  End of Colors  ======*/
+
+/*=============================================
+=            Typography            =
+=============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@500;600;700&display=swap');
+/**
+* 1) The plaifaire font We'll use this for headings mostly
+    htttps:// font 
+
+* 2) The Raleway
+*
+*
+*/
+/* Font Familes */
+$secondary-font :'Anonymous Pro', monospace; /* 1 */
+$primary-font: 'Inter', sans-serif; /* 2 */
+
+/* Font sizes */
+
+$fs-xs: 0.75rem; // 12px
+
+$fs-sm: 0.875rem; // 14px
+
+$fs-base: 1rem; // 16px
+
+$fs-lg: 1.125rem; // 18px
+
+$fs-xl: 1.5rem; // 24px
+
+/* Heading Font sizes */
+
+$h-1: 1.375rem; //22px
+
+$h-2: 1.375rem; // 22px
+
+$h-3: 1rem; // 16px
+
+$h-4: 1.125rem; // 18px
+
+$h-5: 0.75rem; // 12px
+
+$h-6: 0.75rem; // 12px
+
+/* Font weights */
+
+$fw-light: 300;
+
+$fw-normal: 400;
+
+$fw-medium: 500;
+
+$fw-semibold: 600;
+
+$fw-bold: 700;
+
+$fw-extrabold: 800;
+
+$fw-black: 900;
+
+/*=====  End of Typography  ======*/
+
+/*=============================================
+=            Breckpoints            =
+=============================================*/
+
+$breakpoints: (
+  md: 46rem,
+
+  //768px
+  lg: 768px,
+
+  // 1024px
+  xl: 1024rem,
+  // 1280px
+);
+
+/*=====  End of Breackpoints  ======*/
+
+/*=============================================
+=            SPACING            =
+=============================================*/
+
+//map
+$sapcing: (
+  xxxs: 0.25rem,
+
+  // 4px;
+  xxs: 0.5rem,
+
+  // 8px;
+  xs: 0.75rem,
+
+  // 12px;
+  sm: 1rem,
+
+  // 16px;
+  md: 1.5rem,
+
+  // 24px;
+  lg: 2rem,
+
+  // 32px;
+  xl: 3rem,
+
+  // 48px;
+  xxl: 4.5rem,
+
+  // 72px;
+  xxxl: 6rem,
+
+  // 96px;
+) !default;
+
+
+/*=============================================
+=            Radius            =
+=============================================*/
+
+//map
+$radius: (
+  s: 12px,
+  m: 16px,
+  l: 30px,
+  xl:40px,
+  // 96px;
+) !default;
+
+
+/*=====  End of Radius  ======*/
+
+/*=============================================
+=            Max with            =
+=============================================*/
+
+//map
+$max-with-container: (
+  general: 1300px,
+);
+
+$main-col: map-get($max-with-container, general) /2;
+
+$max-with-col:(
+  main:$main-col,
+)!default;
+$with-col:(
+  main: 40%,
+  main-mobile:45%
+) !default;
+$padding-side-container:(
+  line: 30px,
+  content: 5px,
+  content-mobile: calc(5% + 3px),
+);
+
+
+/*=====  End of Radius  ======*/
+

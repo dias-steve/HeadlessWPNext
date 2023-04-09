@@ -1,0 +1,21 @@
+@import '@/styles/theme/variables';
+.wrapper_instafeed{
+    display: flex;
+    
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.bearing{
+    height: 1px;
+    margin-bottom: 100%;
+    width: 100vw;
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        margin-bottom: 0;
+    }
+
+    position: absolute;
+}

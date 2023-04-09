@@ -1,0 +1,204 @@
+@import '@/styles/theme/variables';
+
+
+
+$img-size: 40vw;
+$img-size-desk: 15vw;
+$max-size: 200px;
+
+$width-img:   $img-size * 2;
+$height-img:  $img-size * 3 ;
+
+
+//desk
+$width-img-desk:   $img-size-desk * 2;
+$height-img-desk:  $img-size-desk * 3 ;
+
+$max-width-img:     $max-size * 2 ;
+$max-height-img:    $max-size * 3 ;
+
+
+// small sizes
+
+//desk
+$img-size-desk-small: 9vw;
+$width-img-desk-small:   $img-size-desk-small * 2;
+$height-img-desk-small:  $img-size-desk-small * 3 ;
+
+//mobil
+$img-size-desk-small-mobil: 30vw;
+$width-img-desk-small-mobil:   $img-size-desk-small-mobil * 2;
+$height-img-desk-small-mobil:  $img-size-desk-small-mobil * 3 ;
+
+//max
+$max-size-small: 120px;
+$max-width-img-small:     $max-size-small * 2 ;
+$max-height-img-small:    $max-size-small * 3 ;
+
+//large size
+
+//desk
+$img-size-desk-large: 19vw;
+$width-img-desk-large:   $img-size-desk-large * 2;
+$height-img-desk-large:  $img-size-desk-large * 3 ;
+
+//mobil
+$img-size-desk-large-mobil: 45vw;
+$width-img-desk-large-mobil:   $img-size-desk-large-mobil * 2;
+$height-img-desk-large-mobil:  $img-size-desk-large-mobil * 3 ;
+
+//max
+$max-size-large: 230px;
+$max-width-img-large:     $max-size-large * 2 ;
+$max-height-img-large:    $max-size-large * 3 ;
+
+.listThumnails_wrapper{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+   
+    .image_thumbnail_container{
+
+        height: 12px;
+        width: 12px;
+        overflow: hidden !important;
+        position: relative;
+        border-radius: 100px;
+        margin: 0 4px;
+
+    }
+}
+
+.global_wrapper{
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        width: 50%;
+    }
+}
+.image_small{
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+        height: $height-img-desk-small !important;
+        width:  $width-img-desk-small !important;
+        max-width:  $max-width-img-small !important;
+        max-height:   $max-height-img-small !important;
+        }
+        height: $height-img-desk-small-mobil !important;
+        width:  $width-img-desk-small-mobil !important;
+}
+
+
+.image_medium{
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+    height: $height-img-desk;
+    width:  $width-img-desk;
+    max-width:  $max-width-img;
+    max-height:   $max-height-img;
+
+    }
+    height: $height-img;
+    width:  $width-img;
+}
+
+.image_medium_small{
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+        height: $height-img-desk !important;
+        width:  $width-img-desk !important;
+        max-width:  $max-width-img !important;
+        max-height:   $max-height-img !important;
+        }
+        height: $height-img-desk-small-mobil !important;
+        width:  $width-img-desk-small-mobil !important;
+}
+
+.image_large_large{
+  
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+        height: $height-img-desk-large !important;
+        width:  $width-img-desk-large !important;
+        max-width:  $max-width-img-large !important;
+        max-height:   $max-height-img-large !important;
+        }
+        height: $height-img-desk-large-mobil !important;
+        width:  $width-img-desk-large-mobil !important;
+
+}
+.image_wrapper{
+    position: relative;
+
+    
+    .image{
+
+        position: absolute;
+    }
+
+    .image1{
+        transition: 300ms;
+        opacity: 1;
+    }
+
+    .image2{
+        transition: 300ms;
+        opacity: 0;
+    }
+    
+}
+.global_container{
+    margin: 50px 0px;
+    @media (pointer:fine){
+    &:hover{
+        .image1{
+            transition: 300ms;
+            opacity: 0;
+        }
+    
+        .image2{
+            transition: 300ms;
+            opacity: 1;
+        }
+    }
+    }
+    /*
+    &:active{
+        .image1{
+            transition: 300ms;
+            opacity: 0;
+        }
+    
+        .image2{
+            transition: 300ms;
+            opacity: 1;
+        }
+    }
+    */
+
+
+}
+.title{
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.image_gallery_container{
+    width: 100%;
+    height: 100%;
+
+}
+
+.info_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title{
+        font-size: $fs-base;
+        font-weight: $fw-light;
+        text-align: center;
+        color: $dark;
+    }
+}
+.global_container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}

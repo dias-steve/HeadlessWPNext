@@ -1,0 +1,30 @@
+@import "@/styles/theme/variables";
+.wrapperOption{
+
+ 
+}
+
+.global_container{
+    @media screen and (min-width: map-get($breakpoints, lg)){
+        display: none;
+    }
+}
+.wrapperModal{
+
+
+    &.hide{
+
+        opacity: 0 !important;
+        transition: 200ms;
+    }
+    &.show{
+        opacity: 1 !important;
+        transition: 300ms;
+    }
+  
+}
+.optionContainer{
+    margin-top: clamp(50px, 10%, 100px);
+    width: 100%;
+
+}

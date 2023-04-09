@@ -1,0 +1,66 @@
+/*=============================================
+=       Single Product Page Desktop  Style       =
+=============================================*/
+/**
+ * Display the Single Product Page Desktop
+ * When the screen width is greater than 768px
+ Style
+ */
+
+@import "@/styles/theme/variables";
+.productInfoFixedContainer {
+  position: sticky;
+
+  bottom: 10%;
+
+  z-index: 10;
+  overflow: hidden;
+
+  &.show{
+    opacity: 1;
+    transition: 500ms;
+  }
+
+  &.hide{
+    opacity: 0;
+    transition: 100ms;
+  }
+}
+.productInfoWrapper {
+  width: 30%;
+  min-width: 300px;
+  white-space: pre-wrap;
+  
+}
+
+.option_wrapper {
+  position: sticky;
+  width: 20%;
+  min-width: 200px;
+
+  z-index: 10;
+  bottom: 8%;
+  left: 90%;
+
+
+  &.show{
+    opacity: 1;
+    transition: 500ms;
+  }
+
+  &.hide{
+    opacity: 0;
+    transition: 100ms;
+  }
+}
+
+.landmark{
+  width: 100px;
+  height: 100px;
+ 
+}
+
+.footerwrapper{
+  scroll-snap-align: center;
+
+}
